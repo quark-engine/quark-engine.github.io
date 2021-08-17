@@ -387,7 +387,7 @@
 <table>
 <thead>
 <tr>
-<th>MD5</th>
+<th align="left">MD5</th>
 <th align="right">Size<br>(MB)</th>
 <th align="right">Before The Improvement<br/> (second)</th>
 <th align="right">After The Improvement<br>(second)</th>
@@ -395,21 +395,21 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>9283c74dd8356c18bb6d94b88b8fdd9b</td>
+<td align="left">9283c74dd8356c18bb6d94b88b8fdd9b</td>
 <td align="right">1</td>
 <td align="right">2.00</td>
 <td align="right">1.58</td>
 <td align="right">26%</td>
 </tr>
 <tr>
-<td>8e241d9a7a7cf8bf606b15a9f43af5fd</td>
+<td align="left">8e241d9a7a7cf8bf606b15a9f43af5fd</td>
 <td align="right">5.3</td>
 <td align="right">3.47</td>
 <td align="right">2.91</td>
 <td align="right">16.13%</td>
 </tr>
 <tr>
-<td>3edfc78ab53521942798ad551027d04f</td>
+<td align="left">3edfc78ab53521942798ad551027d04f</td>
 <td align="right">10</td>
 <td align="right">60.53</td>
 <td align="right">42.53</td>
@@ -422,7 +422,7 @@
 <table>
 <thead>
 <tr>
-<th>MD5</th>
+<th align="left">MD5</th>
 <th align="right">Size<br>(MB)</th>
 <th align="right">Before The Improvement<br/> (second)</th>
 <th align="right">After The Improvement<br>(second)</th>
@@ -430,21 +430,21 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>9283c74dd8356c18bb6d94b88b8fdd9b</td>
+<td align="left">9283c74dd8356c18bb6d94b88b8fdd9b</td>
 <td align="right">1</td>
 <td align="right">5.56</td>
 <td align="right">1.24</td>
 <td align="right">77.70%</td>
 </tr>
 <tr>
-<td>8e241d9a7a7cf8bf606b15a9f43af5fd</td>
+<td align="left">8e241d9a7a7cf8bf606b15a9f43af5fd</td>
 <td align="right">5.3</td>
 <td align="right">21.47</td>
 <td align="right">12.60</td>
 <td align="right">41.31%</td>
 </tr>
 <tr>
-<td>3edfc78ab53521942798ad551027d04f</td>
+<td align="left">3edfc78ab53521942798ad551027d04f</td>
 <td align="right">10</td>
 <td align="right">1118.00</td>
 <td align="right">462.90</td>
@@ -453,7 +453,7 @@
 </tbody></table>
 <center>Table 8.2. CPU Time on all APKs</center><br>
 
-<p>After implemented the <a target="_blank" rel="noopener" href="https://github.com/quark-engine/quark-engine/pull/231">patch</a>, the memory usage saved up to <strong>22.27%</strong> on average.<br>| MD5                            | Size<br>(MB) | Before The Improvement<br/> (MB) | After The Improvement<br>(MB) | Percentage <br>(%) |<br>| ——————————— | ———–: | ——————————-: | —————————-: | —————–: |<br>| 9283c74dd8356c18bb6d94b88b8fdd9b         |            1 |                           285.00 |                        211.76 |             25.70% |<br>|  8e241d9a7a7cf8bf606b15a9f43af5fd  |      5.3     |  278.19  |235.63| 15.30% |<br>| 3edfc78ab53521942798ad551027d04f             |           10 |                          1116.40 |                        828.11 |             25.82% |</p>
+<p>After implemented the <a target="_blank" rel="noopener" href="https://github.com/quark-engine/quark-engine/pull/231">patch</a>, the memory usage saved up to <strong>22.27%</strong> on average.<br>| MD5                              | Size<br>(MB) | Before The Improvement<br/> (MB) | After The Improvement<br>(MB) | Percentage <br>(%) |<br>|:——————————– | ————:| ——————————–:| —————————–:| ——————:|<br>| 9283c74dd8356c18bb6d94b88b8fdd9b |            1 |                           285.00 |                        211.76 |             25.70% |<br>| 8e241d9a7a7cf8bf606b15a9f43af5fd |          5.3 |                           278.19 |                        235.63 |             15.30% |<br>| 3edfc78ab53521942798ad551027d04f |           10 |                          1116.40 |                        828.11 |             25.82% |</p>
 <center>Table 8.3. Memory Usage on all APKs</center><br>
 
 <p><span style="color:#157040"><em><strong>Relative PRs:</strong></em></span></p>
@@ -496,7 +496,7 @@
 <center>Table 9.1. Androguard analysis time on all apks</center><br>
 
 <p><strong>Rizin based core library</strong></p>
-<p>The improvement is significant on large APKs. However, the cost of process initialization makes it not obvious when analyzing small ones. I conclude that the improvement is suitable to apply when users encounter speed issues on Quark. See Table 9.2. for more details.<br>| MD5                            | Size<br>(MB) | Before The Improvement<br/> (Second) | After The Improvement<br>(Second) | Percentage <br>(%) |<br>| ——————————— | ———–: | ——————————-: | —————————-: | —————–: |<br>| 9283c74dd8356c18bb6d94b88b8fdd9b         |            1 | 1.24      |1.70|  -37.09%    |<br>| 8e241d9a7a7cf8bf606b15a9f43af5fd|   5.3 | 21.47 |    12.60      | 41.31%  |<br>| 3edfc78ab53521942798ad551027d04f             |           10 |462.90    |    36.93  | 92.02%  |</p>
+<p>The improvement is significant on large APKs. However, the cost of process initialization makes it not obvious when analyzing small ones. I conclude that the improvement is suitable to apply when users encounter speed issues on Quark. See Table 9.2. for more details.<br>| MD5                              | Size<br>(MB) | Before The Improvement<br/> (Second) | After The Improvement<br>(Second) | Percentage <br>(%) |<br>|:——————————– | ————:| ————————————:| ———————————:| ——————:|<br>| 9283c74dd8356c18bb6d94b88b8fdd9b |            1 |                                 1.24 |                              1.70 |            -37.09% |<br>| 8e241d9a7a7cf8bf606b15a9f43af5fd |          5.3 |                                21.47 |                             12.60 |             41.31% |<br>| 3edfc78ab53521942798ad551027d04f |           10 |                               462.90 |                             36.93 |             92.02% |</p>
 <center>Table 9.2. Rizin analysis time on all apks</center><br>
 
 <p><span style="color:#157040"><em><strong>Relative PRs:</strong></em></span></p>
