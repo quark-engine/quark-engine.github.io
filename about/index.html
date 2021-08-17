@@ -186,7 +186,121 @@
                 
 
 <article class="page-content">
-  <p>Quark</p>
+  <p align="center">
+    <a target="_blank" rel="noopener" href="https://www.blackhat.com/asia-21/arsenal/schedule/index.html#quark-engine-storyteller-of-android-malware-22458">
+        <img alt="Black Hat Arsenal" src="https://img.shields.io/badge/Black%20Hat%20Arsenal-Asia%202021-blue" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://conference.hitb.org/hitb-lockdown002/sessions/quark-engine-an-obfuscation-neglect-android-malware-scoring-system/">
+        <img alt="HITB" src="https://img.shields.io/badge/HITB-Lockdown%20002-red" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=SOH4eqrv9_g&ab_channel=ROOTCONHackingConference">
+        <img alt="rootcon" src="https://img.shields.io/badge/ROOTCON-2020-orange" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XK-yqHPnsvc&ab_channel=DEFCONConference">
+        <img alt="defcon" src="https://img.shields.io/badge/DEFCON%2028-BTV-blue" srcset="/img/loading.gif" lazyload>
+    </a><br>
+    <a target="_blank" rel="noopener" href="https://travis-ci.org/quark-engine/quark-engine.svg?branch=master">
+        <img alt="build status" src="https://travis-ci.org/quark-engine/quark-engine.svg?branch=master" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://codecov.io/gh/quark-engine/quark-engine">
+        <img alt="codecov" src="https://codecov.io/gh/quark-engine/quark-engine/branch/master/graph/badge.svg" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://github.com/18z/quark-rules/blob/master/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/License-GPLv3-blue.svg" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-360/">
+        <img alt="python version" src="https://img.shields.io/badge/python-3.8-blue.svg" srcset="/img/loading.gif" lazyload>
+    </a>
+    <a target="_blank" rel="noopener" href="https://pypi.org/project/quark-engine/">
+        <img alt="PyPi Download" src="https://pepy.tech/badge/quark-engine" srcset="/img/loading.gif" lazyload>
+    </a><br>
+    <a target="_blank" rel="noopener" href="https://t.me/joinchat/HrOyhhipvoFjOYc7mc941w">
+        <img alt="Telegram" src="https://img.shields.io/badge/telegram-eff?logo=telegram" srcset="/img/loading.gif" lazyload>
+    </a><br>
+    <b> An Obfuscation-Neglect Android Malware Scoring System</b>
+    <img src="https://i.imgur.com/8GwkWei.png" srcset="/img/loading.gif" lazyload/>
+</p>
+
+
+<p>Quark-Engine is also bundled with <a target="_blank" rel="noopener" href="https://tools.kali.org/tools-listing">Kali Linux</a>, <a target="_blank" rel="noopener" href="https://blackarch.org/mobile.html">BlackArch</a>.<br>:shipit:  A trust-worthy, practical tool that’s ready to boost up your malware reverse engineering. <a target="_blank" rel="noopener" href="https://twitter.com/quarkengine">https://twitter.com/quarkengine</a></p>
+<h2 id="Available-In"><a href="#Available-In" class="headerlink" title="Available In"></a>Available In</h2><img src="https://i.imgur.com/oQcqRXy.png" srcset="/img/loading.gif" lazyload/>
+
+<img src="https://i.imgur.com/nz4m8kr.png" srcset="/img/loading.gif" lazyload/>
+
+<p><a target="_blank" rel="noopener" href="https://asciinema.org/a/416810"><img src="https://asciinema.org/a/416810.svg" srcset="/img/loading.gif" lazyload alt="asciicast"></a></p>
+<h2 id="Why-Quark"><a href="#Why-Quark" class="headerlink" title="Why Quark?"></a>Why Quark?</h2><p>Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.</p>
+<p>We have an order theory of criminal which explains stages of committing a crime. For example, crime of murder consists of five stages, they are determined, conspiracy, preparation, start and practice. The latter the stage the more we’re sure that the crime is practiced.</p>
+<p>According to the above principle, <code>we developed our order theory of android malware</code>. We developed five stages to see if the malicious activity is being practiced. They are 1. Permission requested. 2. Native API call. 3. Certain combination of native API. 4. Calling sequence of native API. 5. APIs that handle the same register. We not only define malicious activities and their stages but also develop weights and thresholds for calculating the threat level of a malware.</p>
+<p>Malware evolved with new techniques to gain difficulties for reverse engineering. Obfuscation is one of the most commonly used techniques. In this talk, we present a Dalvik bytecode loader with the order theory of android malware to neglect certain cases of obfuscation.</p>
+<p>Our Dalvik bytecode loader consists of functionalities such as 1. Finding cross reference and calling sequence of the native API. 2. Tracing the bytecode register. The combination of these functionalities (yes, the order theory) not only can neglect obfuscation but also match perfectly to the design of our malware scoring system.</p>
+<h2 id="Easy-to-Use-and-Reading-Friendly-Report"><a href="#Easy-to-Use-and-Reading-Friendly-Report" class="headerlink" title="Easy to Use and Reading Friendly Report"></a>Easy to Use and Reading Friendly Report</h2><p>Quark is very easy to use and also provides flexible output formats. There are 6 types of output reports: detail report,<br>call graph, rules classification, summary report, label-based report, behaviors comparison radar chart. Please see below for more details.</p>
+<h3 id="Detail-Report"><a href="#Detail-Report" class="headerlink" title="Detail Report"></a>Detail Report</h3><p>This is how we examine a real android malware (candy corn) with one single rule (crime).</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -d<br></code></pre></td></tr></table></figure>
+
+<p>and the report will look like:</p>
+<img src="https://i.imgur.com/g28N7qk.png" srcset="/img/loading.gif" lazyload/>
+
+<p>There is the possibility to select only one label to filter the rules:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -d network<br></code></pre></td></tr></table></figure>
+<p>There is also the possibility to select only one rule:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -d 00058.json<br></code></pre></td></tr></table></figure>
+
+<h3 id="Call-Graph-for-Every-Potential-Malicious-Activity"><a href="#Call-Graph-for-Every-Potential-Malicious-Activity" class="headerlink" title="Call Graph for Every Potential Malicious Activity"></a>Call Graph for Every Potential Malicious Activity</h3><p>You can add the <code>-g</code> option to the quark command, and you can<br>get the call graph (only those rules match with 100% confidence)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a Ahmyth.apk -s -g<br></code></pre></td></tr></table></figure>
+<img src="https://i.imgur.com/5xcrcdN.png" srcset="/img/loading.gif" lazyload/>
+
+<h3 id="Rules-Classification"><a href="#Rules-Classification" class="headerlink" title="Rules Classification"></a>Rules Classification</h3><p>You can add the <code>-c</code> option to the quark command, and you can<br>output the rules classification with the mutual parent function (only those rules match with 100% confidence).</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a Ahmyth.apk -s -c<br></code></pre></td></tr></table></figure>
+<img src="https://i.imgur.com/YTK8V1x.png" srcset="/img/loading.gif" lazyload/>
+
+<h3 id="Summary-Report"><a href="#Summary-Report" class="headerlink" title="Summary Report"></a>Summary Report</h3><p>Examine with rules.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -s<br></code></pre></td></tr></table></figure>
+<img src="https://i.imgur.com/v7ehRW0.png" srcset="/img/loading.gif" lazyload/>
+
+<p>There is the possibility to select only one label to filter the rules:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -s network<br></code></pre></td></tr></table></figure>
+<p>There is also the possibility to select only one rule:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a 14d9f1a92dd984d6040cc41ed06e273e.apk -s 00058.json<br></code></pre></td></tr></table></figure>
+
+<h3 id="Label-based-Report"><a href="#Label-based-Report" class="headerlink" title="Label-based Report"></a>Label-based Report</h3><p>Check which topic (indicated by <a target="_blank" rel="noopener" href="https://github.com/quark-engine/quark-rules/blob/master/label_desc.csv">labels</a>) of the malware is more aggressive.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a Ahmyth.apk -l detailed<br></code></pre></td></tr></table></figure>
+<img src="https://i.imgur.com/0GbBDfn.png" srcset="/img/loading.gif" lazyload/>
+
+<h3 id="Behaviors-Comparison-Radar-Chart"><a href="#Behaviors-Comparison-Radar-Chart" class="headerlink" title="Behaviors Comparison Radar Chart"></a>Behaviors Comparison Radar Chart</h3><p>With the following command, you can compare different APK actions based on the max confidence of rule labels and generate<br>a radar chart.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a first.apk -a second.apk -C<br></code></pre></td></tr></table></figure>
+
+<img src="https://i.imgur.com/ClRWOei.png" srcset="/img/loading.gif" lazyload/>
+
+<h3 id="Parallelizing-Quark"><a href="#Parallelizing-Quark" class="headerlink" title="Parallelizing Quark"></a>Parallelizing Quark</h3><p>Now Quark supports multiprocessing for analyzing APKs parallelly, by adding the option <code>--multi-process</code> and set the number of processes. (the default is the number of CPUs in your computer.)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a Ahmyth.apk -s --multi-process 4<br></code></pre></td></tr></table></figure>
+
+<h3 id="Upcoming-unstable-feature"><a href="#Upcoming-unstable-feature" class="headerlink" title="Upcoming unstable feature"></a>Upcoming unstable feature</h3><p>Now Quark also supports <a target="_blank" rel="noopener" href="https://github.com/rizinorg/rizin">Rizin</a> as one of our Android analysis frameworks. You can use option <code>--core-library</code> with <code>rizin</code> to enable the Rizin-based analysis library.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">quark -a Ahmyth.apk -s --core-library rizin<br></code></pre></td></tr></table></figure>
+
+<h2 id="QuickStart"><a href="#QuickStart" class="headerlink" title="QuickStart"></a>QuickStart</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
+<li>  Python 3.7+</li>
+<li>  git</li>
+<li>  graphviz</li>
+<li>  click &gt;= 8.0.1 (For CLI supports)</li>
+</ul>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ pip3 install -U quark-engine<br></code></pre></td></tr></table></figure>
+
+<h3 id="Get-the-latest-quark-rules-from-our-quark-rules-repo"><a href="#Get-the-latest-quark-rules-from-our-quark-rules-repo" class="headerlink" title="Get the latest quark rules from our quark-rules repo"></a>Get the latest quark rules from our <a target="_blank" rel="noopener" href="https://github.com/quark-engine/quark-rules">quark-rules</a> repo</h3><p>Now you can download the quark-rules to your home directory with a simple command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ freshquark<br></code></pre></td></tr></table></figure>
+
+<p>Check <code>--help</code> to see the detailed usage description.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ quark --<span class="hljs-built_in">help</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Test-It-Out"><a href="#Test-It-Out" class="headerlink" title="Test It Out"></a>Test It Out</h3><p>You may refer to the <a target="_blank" rel="noopener" href="https://quark-engine.readthedocs.io/en/latest/">Quark Engine Document</a> for more details of testing and development information.</p>
+<h2 id="Acknowledgments"><a href="#Acknowledgments" class="headerlink" title="Acknowledgments"></a>Acknowledgments</h2><h4 id="The-Honeynet-Project"><a href="#The-Honeynet-Project" class="headerlink" title="The Honeynet Project"></a>The Honeynet Project</h4><p><a target="_blank" rel="noopener" href="https://www.honeynet.org"> <img style="border: 0.2px solid black" width=115 height=150 src="https://i.imgur.com/znu7cMJ.png" srcset="/img/loading.gif" lazyload alt="Honeynet.org logo"> </a></p>
+<h4 id="Google-Summer-Of-Code"><a href="#Google-Summer-Of-Code" class="headerlink" title="Google Summer Of Code"></a>Google Summer Of Code</h4><p>Quark-Engine has been participating in the GSoC under the Honeynet Project!</p>
+<ul>
+<li>2021: Join us! <a target="_blank" rel="noopener" href="https://www.honeynet.org/gsoc/gsoc-2021/google-summer-of-code-2021-project-ideas/">Projects available</a></li>
+</ul>
+<p>Stay tuned for the upcoming GSoC! Join the <a target="_blank" rel="noopener" href="https://gsoc-slack.honeynet.org/">Honeynet Slack chat</a> for more info.</p>
+<h2 id="Core-Values-of-Quark-Engine-Team"><a href="#Core-Values-of-Quark-Engine-Team" class="headerlink" title="Core Values of Quark Engine Team"></a>Core Values of Quark Engine Team</h2><ul>
+<li>We love <strong>battle fields</strong>. We embrace <strong>uncertainties</strong>. We challenge <strong>impossibles</strong>. We <strong>rethink</strong> everything. We change the way people think.<br>And the most important of all, we benefit ourselves by benefit others <strong>first</strong>.</li>
+</ul>
 
 
   
