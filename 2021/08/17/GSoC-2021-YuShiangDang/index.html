@@ -263,7 +263,7 @@
 <h3 id="2-Solve-CPU-idle-problem-for-quark-rule-generate"><a href="#2-Solve-CPU-idle-problem-for-quark-rule-generate" class="headerlink" title="2. Solve CPU idle problem for quark-rule-generate"></a>2. Solve CPU idle problem for quark-rule-generate</h3><p>The multiprocess evenly distribute APIs to each process (one CPU core) for analysis. However, some processes are idle when they finish the analysis of distributed APIs. And this is a waste of the CPU resource. Therefore, for maximizing the usage of the CPU, I implemented a feature that continuously checks the CPU status and reallocates the APIs that are yet to be analyzed to all CPU cores when the idle CPU core is found.</p>
 <p><span style="color:#157040"><em><strong>Related PR:</strong></em></span></p>
 <p>quark-rule-generate <a target="_blank" rel="noopener" href="https://github.com/quark-engine/quark-rule-generate/pull/3">PR#3</a>: Fix the CPU idle problem</p>
-<p><a href="##2-First-Goal---Solve-CPU-idle-problem-for-quark-rule-generate">Go back to summary</a></p>
+<p><a href="#2-First-Goal-Solve-CPU-idle-problem-for-quark-rule-generate">Go back to summary</a></p>
 <hr>
 <h3 id="3-Improve-the-UX-for-using-Quark-in-Jadx"><a href="#3-Improve-the-UX-for-using-Quark-in-Jadx" class="headerlink" title="3. Improve the UX for using Quark in Jadx"></a>3. Improve the UX for using Quark in Jadx</h3><p><span style="color:#157040"><em><strong>3.1. Implemented Quark auto installation for Jadx</strong></em></span></p>
 <p>In previous integration, Jadx users need to install quark themselves before using the quark analysis module. Therefore, for better UX, I implemented the auto installation of quark in <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx/pull/1199">PR#1199</a>.</p>
@@ -282,7 +282,7 @@
 
 <p><span style="color:#157040"><em><strong>Related PRs</strong></em></span></p>
 <p>Jadx <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx/pull/1203">PR#1203</a>: Change Quark task to background task<br>Jadx <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx/pull/1202">PR#1202</a>: Add Error/Warning dialogs<br>Jadx <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx/pull/1199">PR#1199</a>: Improvements of Quark integration</p>
-<p><a href="##3-Second-Goal---Improve-the-UX-for-using-Quark-in-Jadx">Go back to summary</a></p>
+<p><a href="##3-Second-Goal-Improve-the-UX-for-using-Quark-in-Jadx">Go back to summary</a></p>
 <hr>
 <h3 id="4-Provide-more-details-of-Quark’s-summary-report-in-Jadx"><a href="#4-Provide-more-details-of-Quark’s-summary-report-in-Jadx" class="headerlink" title="4. Provide more details of Quark’s summary report in Jadx"></a>4. Provide more details of Quark’s summary report in Jadx</h3><p>We plan to provide more details so as to help users quickly locate malicious behaviors in the binary. With this added information, users can have an overview. Then they know where to start and can dive into the source codes.</p>
 <p>However, during the GSoC, the founder of Jadx, Skylot unexpetedly helped us implement this feature. We appreciate his kindly and unexpected help. :D</p>
@@ -296,7 +296,7 @@
 
 <p><span style="color:#157040"><em><strong>Related Commits</strong></em></span></p>
 <p>Jadx <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx/commit/b5720bd14e9e9673a60f9aa8e8b1390efef39288">commit b5720b:</a> fix(gui): improve Quark tasks scheduling and report viewer</p>
-<p><a href="##4-Second-Goal---Provide-more-details-of-Quark%E2%80%99s-summary-report-in-Jadx">Go back to summary</a></p>
+<p><a href="##4-Second-Goal-Provide-more-details-of-Quark%E2%80%99s-summary-report-in-Jadx">Go back to summary</a></p>
 <hr>
 <h3 id="5-Integrate-Quark-to-MobSF"><a href="#5-Integrate-Quark-to-MobSF" class="headerlink" title="5. Integrate Quark to MobSF"></a>5. Integrate Quark to MobSF</h3><p><span style="color:#157040"><em><strong>5.1. Add Quark Analysis Report</strong></em></span></p>
 <p>An implementation of quark integration to MobSF is done and is merged. See Figure 5.1. for the demo.</p>
@@ -311,7 +311,7 @@
 
 <p><span style="color:#157040"><em><strong>Related PR:</strong></em></span></p>
 <p>MobSF <a target="_blank" rel="noopener" href="https://github.com/MobSF/Mobile-Security-Framework-MobSF/pull/1761">PR#1761</a>: Add Quark Engine as one of the static analyzers</p>
-<p><a href="##5-Second-Goal---Integrate-Quark-to-MobSF">Go back to summary</a></p>
+<p><a href="##5-Second-Goal-Integrate-Quark-to-MobSF">Go back to summary</a></p>
 <hr>
 <h3 id="6-Implement-behavior-map-of-Quark-to-APKLab"><a href="#6-Implement-behavior-map-of-Quark-to-APKLab" class="headerlink" title="6. Implement behavior map of Quark to APKLab"></a>6. Implement behavior map of Quark to APKLab</h3><p><span style="color:#157040"><em><strong>6.1. Add behavior map to APKlab</strong></em></span></p>
 <p>Before we implemented this feature, we fix a permission issue for APKLab. See <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/pull/135">PR#135</a> for more information. The behavior map is implemented. See Figure 6.1. and Figure 6.2. With the behavior map, users can quickly understand the relationship between the suspicious behaviors quark detected. However, this PR is awaiting to be solved since we encountered some CI issues.</p>
@@ -323,7 +323,7 @@
 
 <p><span style="color:#157040"><em><strong>Related PR:</strong></em></span></p>
 <p>APKLab <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/pull/135">PR#135</a>: Quark integration improvement</p>
-<p><a href="##6-Second-Goal---Implement-behavior-map-of-Quark-to-APKLab">Go back to summary</a></p>
+<p><a href="##6-Second-Goal-Implement-behavior-map-of-Quark-to-APKLab">Go back to summary</a></p>
 <hr>
 <h3 id="7-Improve-UI-UX-of-Quark-integration-in-APKLab"><a href="#7-Improve-UI-UX-of-Quark-integration-in-APKLab" class="headerlink" title="7. Improve UI/UX of Quark integration in APKLab"></a>7. Improve UI/UX of Quark integration in APKLab</h3><p><span style="color:#157040"><em><strong>7.1. [UX] Time Consuming when analyzing large size APKs</strong></em></span></p>
 <p>In the previous integration of quark to APKLab, we’ve found out that it may take a long time when analyzing large size apks. There are several reasons we think might cause this problem. The problem could be the slow performance of Quark. Or the problem could be the slow performance when executing tools that works with Quark simultaneously.</p>
@@ -335,7 +335,7 @@
 <p>Lack of indention of the sub-item in the Quark report may cause misunderstanding for users. Therefore, we opened an issue to discuss with APKLab. See <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/issues/142">issue#142</a> for more information.</p>
 <p><span style="color:#157040"><em><strong>Related Issues:</strong></em></span></p>
 <p>APKLab <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/issues/140">Issue#140</a> Quark analysis may take a long time<br>APKLab <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/issues/141">Issue#141</a> Quark report only shows 100% confidence activities<br>APKLab <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab/issues/142">Issue#142</a> There are no indent spaces at the sub-item in the Quark report</p>
-<p><a href="##7-Second-Goal---Improve-UI/UX-of-Quark-integration-in-APKLab">Go back to summary</a>.</p>
+<p><a href="##7-Second-Goal-Improve-UI/UX-of-Quark-integration-in-APKLab">Go back to summary</a>.</p>
 <h2 id="Acknowledgments"><a href="#Acknowledgments" class="headerlink" title="Acknowledgments"></a>Acknowledgments</h2><p>Thank Google, for providing such a great project.<br>Thank <a target="_blank" rel="noopener" href="https://www.honeynet.org/">Honeynet Project</a> gives me the opportunity.<br>Thank my mentor, <a target="_blank" rel="noopener" href="https://github.com/18z">KunYu Chen</a>, for all his sincere support and guidance.<br>Thank <a target="_blank" rel="noopener" href="https://github.com/skylot/jadx">Jadx</a>, <a target="_blank" rel="noopener" href="https://github.com/MobSF/Mobile-Security-Framework-MobSF">MobSF</a>, <a target="_blank" rel="noopener" href="https://github.com/APKLab/APKLab">APKLab</a> for helping me reach my goal.</p>
 
             </div>
